@@ -1,54 +1,309 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Kelvi Marlon | Portfólio</title>
-<style>
-:root{color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#040605;--panel:#0b110d;--line:#1b2a20;--text:#eaf2ec;--muted:#93a699;--green:#2ee59d;--ink:#03140c}
-*,*:before,*:after{box-sizing:inherit}
-html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(900px 420px at 85% -80px,rgba(46,229,157,.16),transparent 70%),var(--bg);color:var(--text);font-family:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;line-height:1.65}
-main{max-width:680px;margin:0 auto;padding:56px 22px 48px}
-.hero{padding-bottom:36px}
-.avatar{width:64px;height:64px;border-radius:18px;background:var(--green);color:var(--ink);display:grid;place-items:center;font-size:1.7rem;font-weight:800;margin-bottom:24px;box-shadow:0 0 0 6px rgba(46,229,157,.12)}
-h1{font-size:clamp(2.4rem,11vw,3.8rem);line-height:1;margin:0 0 14px;letter-spacing:-.03em;font-weight:800}
-h1 .sur{display:block;color:var(--green)}
-.role{font-size:1.1rem;color:var(--muted);margin:0 0 6px}
-.place{color:var(--muted);margin:0 0 28px;font-size:.98rem}
-.btns{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border-radius:14px;font-weight:700;font-size:1rem;text-decoration:none;border:1.5px solid var(--green);color:var(--green);transition:transform .15s,background .15s}
-.btn.main{background:var(--green);color:var(--ink)}
-.btn:hover{transform:translateY(-2px)}
-.btn:focus-visible,a:focus-visible{outline:3px solid #fff;outline-offset:3px}
-section{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:16px;padding:24px 22px;margin-top:18px}
-h2{font-size:1.25rem;margin:0 0 14px;letter-spacing:-.01em}
-p{margin:0}
-.group{margin-top:16px}
-.group:first-of-type{margin-top:0}
-h3{font-size:.95rem;font-weight:600;color:var(--muted);margin:0 0 8px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
-.chips li{padding:7px 14px;border-radius:999px;background:rgba(46,229,157,.09);border:1px solid rgba(46,229,157,.28);font-size:.95rem}
-.items{list-style:none;margin:0;padding:0}
-.items li{padding:12px 0;border-top:1px solid var(--line)}
-.items li:first-child{border-top:0;padding-top:0}
-.items li:last-child{padding-bottom:0}
-.items b{display:block}
-.items span{color:var(--muted);font-size:.95rem}
-.contact{text-align:center;padding:30px 22px}
-.contact p{color:var(--muted);margin-bottom:18px}
-.contact .btns{justify-content:center}
-.mail{margin-top:16px;color:var(--muted);font-size:.95rem;word-break:break-all}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}.btn:hover{transform:none}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Kelvi Marlon | Portfólio</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+      --bg: #040605;
+      --panel: #0b110d;
+      --line: #1b2a20;
+      --text: #eaf2ec;
+      --muted: #93a699;
+      --green: #2ee59d;
+      --ink: #03140c;
+    }
+
+    *, *:before, *:after { box-sizing: inherit; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: radial-gradient(900px 420px at 85% -80px, rgba(46,229,157,.16), transparent 70%), var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+      line-height: 1.65;
+    }
+
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 56px 22px 48px;
+    }
+
+    .hero { padding-bottom: 36px; }
+
+    .avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: var(--green);
+      color: var(--ink);
+      display: grid;
+      place-items: center;
+      font-size: 1.7rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+      box-shadow: 0 0 0 6px rgba(46,229,157,.12);
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 11vw, 3.8rem);
+      line-height: 1;
+      margin: 0 0 14px;
+      letter-spacing: -.03em;
+      font-weight: 800;
+    }
+
+    h1 .sur {
+      display: block;
+      color: var(--green);
+    }
+
+    .role {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 0 0 6px;
+    }
+
+    .place {
+      color: var(--muted);
+      margin: 0 0 28px;
+      font-size: .98rem;
+    }
+
+    .btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 26px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      border: 1.5px solid var(--green);
+      color: var(--green);
+      transition: transform .15s, background .15s;
+    }
+
+    .btn.main {
+      background: var(--green);
+      color: var(--ink);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn:focus-visible,
+    a:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 3px;
+    }
+
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--green);
+      border-radius: 16px;
+      padding: 24px 22px;
+      margin-top: 18px;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin: 0 0 14px;
+      letter-spacing: -.01em;
+    }
+
+    p { margin: 0; }
+
+    .group { margin-top: 16px; }
+    .group:first-of-type { margin-top: 0; }
+
+    h3 {
+      font-size: .95rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin: 0 0 8px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .chips li {
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: rgba(46,229,157,.09);
+      border: 1px solid rgba(46,229,157,.28);
+      font-size: .95rem;
+    }
+
+    .items {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .items li {
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .items li:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .items li:last-child {
+      padding-bottom: 0;
+    }
+
+    .items b { display: block; }
+    .items span {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .contact {
+      text-align: center;
+      padding: 30px 22px;
+    }
+
+    .contact p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .contact .btns { justify-content: center; }
+
+    .mail {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: .95rem;
+      word-break: break-all;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+      .btn:hover { transform: none; }
+    }
+  </style>
 </head>
 <body>
-<main>
-<header class="hero">
-<h1>Kelvi Marlon<span class="sur">Marinho Alfaia</span></h1>
-<p class="role">Estudante de Técnico em Informática</p>
-<p class="place">Manaus, Amazonas. Em busca da primeira oportunidade.</p>
-<div class="btns">
-<a class="btn main" href="https://wa.me/5592986057036" target="_blank" rel="noopener">Chamar no WhatsApp</a>
-<a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=kekel.marlon07@gmail.com" target="_blank" rel="noopener">Enviar e-mail</a>
-</div>
+  <main>
+    <header class="hero">
+      <div class="avatar">K</div>
+      <h1>Kelvi Marlon<span class="sur">Marinho Alfaia</span></h1>
+      <p class="role">Estudante de Técnico em Informática</p>
+      <p class="place">Manaus, Amazonas. Em busca da primeira oportunidade.</p>
+
+      <div class="btns">
+        <a class="btn main" href="https://wa.me/5592986057036" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=kekel.marlon07@gmail.com" target="_blank" rel="noopener">Enviar e-mail</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Sobre mim</h2>
+      <p>Estou buscando minha primeira oportunidade de trabalho. Sou dedicado, responsável e aprendo rápido. Tenho interesse em crescer na área de tecnologia e contribuir em um ambiente que valorize aprendizado, disciplina e boa comunicação.</p>
+    </section>
+
+    <section>
+      <h2>O que sei fazer</h2>
+
+      <div class="group">
+        <h3>Ferramentas e tecnologias</h3>
+        <ul class="chips">
+          <li>JavaScript</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>C++</li>
+          <li>Arduino</li>
+          <li>Word</li>
+          <li>Excel</li>
+          <li>PowerPoint</li>
+          <li>Canva</li>
+          <li>Google Drive</li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <h3>Atividades</h3>
+        <ul class="chips">
+          <li>Suporte básico em computador</li>
+          <li>Atendimento ao público</li>
+          <li>Informática básica</li>
+          <li>Organização de tarefas</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Formação</h2>
+      <ul class="items">
+        <li>
+          <b>Técnico em Informática</b>
+          <span>FUCAPI (cursando)</span>
+        </li>
+        <li>
+          <b>Ensino Médio</b>
+          <span>Cursando</span>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Cursos</h2>
+      <ul class="items">
+        <li>
+          <b>Fundamentos de TI</b>
+          <span>Informática básica e conceitos do setor</span>
+        </li>
+        <li>
+          <b>Word, Excel e PowerPoint</b>
+          <span>Fundação Bradesco</span>
+        </li>
+        <li>
+          <b>Atendimento ao Público</b>
+          <span>Fundação Bradesco</span>
+        </li>
+        <li>
+          <b>SENAI</b>
+          <span>Informática Básica</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="contact">
+      <h2>Vamos conversar?</h2>
+      <p>Estou aberto a oportunidades de estágio, suporte técnico e aprendizado em ambiente profissional.</p>
+
+      <div class="btns">
+        <a class="btn main" href="https://wa.me/5592986057036" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=kekel.marlon07@gmail.com" target="_blank" rel="noopener">E-mail</a>
+      </div>
+
+      <div class="mail">kekel.marlon07@gmail.com</div>
+    </section>
+  </main>
+</body>
+</html>
