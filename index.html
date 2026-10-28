@@ -17,6 +17,7 @@
       --muted: #93a699;
       --green: #2ee59d;
       --ink: #03140c;
+      --radius: 18px;
     }
 
     *, *:before, *:after { box-sizing: inherit; }
@@ -31,12 +32,14 @@
     }
 
     main {
-      max-width: 680px;
+      width: min(100%, 920px);
       margin: 0 auto;
-      padding: 56px 22px 48px;
+      padding: 32px 18px 48px;
     }
 
-    .hero { padding-bottom: 36px; }
+    .hero {
+      padding-bottom: 18px;
+    }
 
     .avatar {
       width: 64px;
@@ -48,15 +51,15 @@
       place-items: center;
       font-size: 1.7rem;
       font-weight: 800;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       box-shadow: 0 0 0 6px rgba(46,229,157,.12);
     }
 
     h1 {
-      font-size: clamp(2.4rem, 11vw, 3.8rem);
-      line-height: 1;
-      margin: 0 0 14px;
-      letter-spacing: -.03em;
+      font-size: clamp(2.3rem, 8vw, 4.2rem);
+      line-height: 0.96;
+      margin: 0 0 12px;
+      letter-spacing: -.04em;
       font-weight: 800;
     }
 
@@ -66,15 +69,15 @@
     }
 
     .role {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: var(--muted);
       margin: 0 0 6px;
     }
 
     .place {
       color: var(--muted);
-      margin: 0 0 28px;
-      font-size: .98rem;
+      margin: 0 0 22px;
+      font-size: .94rem;
     }
 
     .btns {
@@ -88,14 +91,16 @@
       align-items: center;
       justify-content: center;
       min-height: 50px;
-      padding: 0 26px;
+      padding: 0 22px;
       border-radius: 14px;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: .96rem;
       text-decoration: none;
       border: 1.5px solid var(--green);
       color: var(--green);
-      transition: transform .15s, background .15s;
+      transition: transform .15s ease, background .15s ease, opacity .15s ease;
+      width: 100%;
+      max-width: 280px;
     }
 
     .btn.main {
@@ -117,14 +122,14 @@
       background: var(--panel);
       border: 1px solid var(--line);
       border-left: 4px solid var(--green);
-      border-radius: 16px;
-      padding: 24px 22px;
-      margin-top: 18px;
+      border-radius: var(--radius);
+      padding: 20px 18px;
+      margin-top: 16px;
     }
 
     h2 {
-      font-size: 1.25rem;
-      margin: 0 0 14px;
+      font-size: 1.15rem;
+      margin: 0 0 12px;
       letter-spacing: -.01em;
     }
 
@@ -134,7 +139,7 @@
     .group:first-of-type { margin-top: 0; }
 
     h3 {
-      font-size: .95rem;
+      font-size: .9rem;
       font-weight: 600;
       color: var(--muted);
       margin: 0 0 8px;
@@ -150,11 +155,11 @@
     }
 
     .chips li {
-      padding: 7px 14px;
+      padding: 7px 12px;
       border-radius: 999px;
       background: rgba(46,229,157,.09);
       border: 1px solid rgba(46,229,157,.28);
-      font-size: .95rem;
+      font-size: .88rem;
     }
 
     .items {
@@ -180,12 +185,12 @@
     .items b { display: block; }
     .items span {
       color: var(--muted);
-      font-size: .95rem;
+      font-size: .92rem;
     }
 
     .contact {
       text-align: center;
-      padding: 30px 22px;
+      padding: 24px 18px;
     }
 
     .contact p {
@@ -198,8 +203,46 @@
     .mail {
       margin-top: 16px;
       color: var(--muted);
-      font-size: .95rem;
+      font-size: .9rem;
       word-break: break-all;
+    }
+
+    @media (min-width: 700px) {
+      main {
+        padding: 56px 24px 60px;
+      }
+
+      .hero {
+        padding-bottom: 28px;
+      }
+
+      .btn {
+        width: auto;
+        max-width: none;
+      }
+
+      section {
+        padding: 24px 22px;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (min-width: 960px) {
+      body {
+        background: radial-gradient(1000px 420px at 80% -80px, rgba(46,229,157,.18), transparent 65%), var(--bg);
+      }
+
+      main {
+        padding-top: 72px;
+      }
+
+      .hero {
+        display: grid;
+        gap: 12px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
